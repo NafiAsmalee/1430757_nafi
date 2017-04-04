@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1430757_CO5027.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Naftech</title>
+
+    <!--LINK TO CSS-->
+    <link href="CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+   
+    <div id="wrapper">
+	<div id="header">
+	</div>
+	
+	<div id="nav">
+		<ul>
+			<li><a href="default.aspx">Home</a></li>
+			<li><a href="">Login</a></li>
+			<li><a href="">Product</a></li>
+			<li><a href="">CheckOut</a></li>
+			<li><a href="contactus.aspx">ContactUs</a></li>
+		</ul>
+
+	</div>
+         <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <div id="footer">
+
+	Designed by Nafi.All right reserved.2017.
+<p>
+        <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+        <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
+	</p>
+	</div>
+</div>
+</div>
+    </form>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
