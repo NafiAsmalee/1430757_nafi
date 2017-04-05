@@ -63,12 +63,15 @@
         <div id = "lppicture" data-u="slides">
             <div>
                 <img data-u="image" src="../img/1.jpg" />
+                <!--Retrieve image from https://i2.wp.com/pureinfotech.com/wp-content/uploads/2017/01/asus-zenbook-3-deluxe-UX490UA_.jpg?fit=1750%2C106-->
             </div>
             <div>
                 <img data-u="image" src="../img/2.jpg" />
+                <!--Retrieve image from http://itplaza.vn/userfiles/images/ASUS/GL552JX-DM144D.jpg-->
             </div>
             <div>
                 <img data-u="image"src="../img/3.jpg" />
+                <!--Retrieve image from https://i.ytimg.com/vi/XFmWHte-fqA/maxresdefault.jpg-->
             </div>
         </div>
         <!-- Bullet Navigator -->

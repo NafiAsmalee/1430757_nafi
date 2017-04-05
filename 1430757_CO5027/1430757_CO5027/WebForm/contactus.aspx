@@ -3,6 +3,7 @@
     
 <div id="cutable">
     <h1>Contact Us</h1>
+    <!--contact us details with submit button-->
 <table>
     <tr>
      <td><asp:Label ID="Label1" runat="server" Text="Name"></asp:Label></td>
@@ -32,6 +33,7 @@
      <td><asp:Button ID="Button1" runat="server" Text="Submit" /></td>
     </tr>
 </table>
+    <!--map from google map-->
     <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/map.JPG" />
      
     </div>

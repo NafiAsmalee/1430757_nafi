@@ -18,7 +18,7 @@
     <div id="wrapper">
 	<div id="header">
 	</div>
-	
+	<!--navigation-->
 	<div id="nav">
 		<ul>
 			<li><a href="default.aspx">Home</a></li>
@@ -33,6 +33,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
+     <!--footer-->
     <div id="footer">
 
 	Designed by Nafi.All right reserved.2017.
@@ -47,15 +48,4 @@
     </form>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
 </html>

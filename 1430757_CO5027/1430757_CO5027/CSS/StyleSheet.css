@@ -1,7 +1,7 @@
 ﻿body {background-color:#ffffff;
 
 }
-/* ---------------------wrapper-------------------------- */	
+/* --wrapper-- */	
 
 #wrapper {
 
@@ -13,7 +13,7 @@
     height: 1100px;
 
 }
-/* ---------------------header-------------------------- */	
+/* --header-- */	
 #header {
 	background-image: url('../images/header.jpg') ;
 	background-position: right ;
@@ -22,7 +22,7 @@
 	height:200px;
 }
 
-/* ---------------------navigation-------------------------- */	
+/* --navigation-- */	
 #nav {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -53,12 +53,12 @@
 	background-color: black;
 	
 }
-/* ---------------------body-------------------------- */	
+/* --body-- */	
 #main {
 	width:1100px;
 	height:650px;
 	}
-
+/* --contact us-- */	
 #cutable table {
   padding-left:450px;
     }
@@ -75,7 +75,7 @@
 
 
 
-/* ---------------------footer-------------------------- */
+/* --footer-- */
 #footer {
 	background-color: #ffffff;
 	clear: both;
