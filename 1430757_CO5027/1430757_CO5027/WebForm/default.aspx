@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="_1430757_CO5027.WebForm._default" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
+ <!-- Retrieve slideshow from http://www.jssor.com/demos/simple-fade-slideshow.slider -->
      <!-- #region Jssor Slider Begin -->
      <script src="../js/intro.js"></script>
     <script src="../js/jquery-1.11.3.min.js"></script>
@@ -62,15 +62,15 @@
         </div>
         <div id = "lppicture" data-u="slides">
             <div>
-                <img data-u="image" src="../img/1.jpg" />
+                <img data-u="image" src="../img/1.jpg" alt="first" />
                 <!--Retrieve image from https://i2.wp.com/pureinfotech.com/wp-content/uploads/2017/01/asus-zenbook-3-deluxe-UX490UA_.jpg?fit=1750%2C106-->
             </div>
             <div>
-                <img data-u="image" src="../img/2.jpg" />
+                <img data-u="image" src="../img/2.jpg" alt="second" />
                 <!--Retrieve image from http://itplaza.vn/userfiles/images/ASUS/GL552JX-DM144D.jpg-->
             </div>
             <div>
-                <img data-u="image"src="../img/3.jpg" />
+                <img data-u="image"src="../img/3.jpg" alt="third" />
                 <!--Retrieve image from https://i.ytimg.com/vi/XFmWHte-fqA/maxresdefault.jpg-->
             </div>
         </div>
