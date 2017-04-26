@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <!-- Retrieve slideshow from http://www.jssor.com/demos/simple-fade-slideshow.slider -->
      <!-- #region Jssor Slider Begin -->
-     <script src="../js/intro.js"></script>
+    <script src="../js/intro.js"></script>
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="../js/jssor.slider-23.0.0.mini.js"></script>
     <link href="../CSS/intro.css" rel="stylesheet" />

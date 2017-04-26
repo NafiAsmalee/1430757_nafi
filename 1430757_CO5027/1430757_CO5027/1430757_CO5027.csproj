@@ -66,8 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\cu.css" />
     <Content Include="CSS\intro.css" />
-    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="CSS\mp.css" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\map.JPG" />
     <Content Include="img\1.jpg" />

@@ -1,0 +1,29 @@
+﻿body {
+    
+}
+/* --contact us-- */	
+
+#cutable table {
+    padding-left:300px;
+}
+
+#cutable h1 {
+        text-align:center;
+}
+
+/* --map-- */
+
+#cutable iframe {
+        width:400px;
+        height:300px;
+        margin-left : 350px;  
+}
+
+.textbox {
+    Width:360px;
+}
+
+.button {
+    Width:100px;
+    margin-left:120px;
+}

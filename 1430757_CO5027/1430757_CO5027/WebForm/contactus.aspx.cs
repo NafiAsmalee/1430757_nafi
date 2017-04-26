@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Net.Mail;
 
-
+// Retrieve from https://www.youtube.com/watch?v=ngldKCSXA6U 
+// Retrieve from https://www.youtube.com/watch?v=Fw1X7HLZfos 
 namespace _1430757_CO5027.WebForm
 {
     public partial class contactus : System.Web.UI.Page

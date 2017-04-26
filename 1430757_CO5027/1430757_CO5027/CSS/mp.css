@@ -60,37 +60,6 @@
 	height:650px;
 }
 
-/* --contact us-- */	
-
-#cutable table {
-    padding-left:300px;
-}
-
-#cutable h1 {
-        text-align:center;
-}
-
-/* --map-- */
-
-#cutable iframe {
-        width:400px;
-        height:300px;
-        margin-left : 350px;  
-}
-
-.textbox {
-    Width:360px;
-}
-
-td.submit {
-    Width:100px;
-}
-
-.btn {
-    Width:100px;
-    margin-left:120px;
-}
-
 /* --footer-- */
 
 #footer {
