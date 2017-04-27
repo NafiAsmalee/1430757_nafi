@@ -85,4 +85,42 @@
     </div>
     <!-- #endregion Jssor Slider End -->
 
+    <div id="table">
+    <table>
+        <tr>
+            <td>
+                <img src="../Images/11.jpg" alt="1" />
+                <!--Retrieve image from https://simmyideas.com/wp-content/uploads/2017/01/ASUS-ROG-Strix-GL553VD.jpg-->
+                
+                <td/>
+             <td>
+                 <img src="../Images/22.jpg" alt="2" />
+                 
+                <!--Retrieve image from https://1.bp.blogspot.com/-agQouM2fpQ0/VYmJesJrxlI/AAAAAAAAFhs/Pj0KW4AXH0Y/s1600/ASUS-ROG-GL552.jpg-->
+                <td/>
+             <td>
+                 <img src="../Images/33.jpg" alt="3" />
+                 
+                <!--Retrieve image from http://assets.hardwarezone.com/img/2013/05/asus_x401u.jpg-->
+                <td/>
+        </tr>
+
+         <tr>
+            <td>
+                <img src="../Images/44.jpg" alt="4" />
+                <!--Retrieve image from http://www.digitalmall.com.sg/assets/images/Asus%20X%20Series%20X550VX-DM066T.jpg-->
+                <td/>
+             <td>
+                 <img src="../Images/55.jpg" alt="5" />
+                 
+                <!--Retrieve image from http://www.blog-nouvelles-technologies.fr/wp-content/uploads/2017/01/bild_0.jpg-->
+                <td/>
+             <td>
+                 <img src="../Images/66.jpg" alt="6" />
+                 
+                <!--Retrieve image from http://cdn1.expertreviews.co.uk/sites/expertreviews/files/6/29/asus_zenbook_x305_b_1078_0.jpg?itok=p3apk30d-->
+                <td/>
+        </tr>
+        </table>
+        </div>
 </asp:Content>

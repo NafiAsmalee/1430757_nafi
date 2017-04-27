@@ -69,6 +69,12 @@
     <Content Include="CSS\cu.css" />
     <Content Include="CSS\intro.css" />
     <Content Include="CSS\mp.css" />
+    <Content Include="Images\11.jpg" />
+    <Content Include="Images\22.jpg" />
+    <Content Include="Images\33.jpg" />
+    <Content Include="Images\44.jpg" />
+    <Content Include="Images\55.jpg" />
+    <Content Include="Images\66.jpg" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\map.JPG" />
     <Content Include="img\1.jpg" />
