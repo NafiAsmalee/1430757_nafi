@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="contactus.aspx.cs" Inherits="_1430757_CO5027.WebForm.contactus" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="_1430757_CO5027.WebForm.contactus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Retrieve from https://www.youtube.com/watch?v=ngldKCSXA6U -->
     <!--Retrieve from https://www.youtube.com/watch?v=Fw1X7HLZfos -->
@@ -34,7 +34,7 @@
         ErrorMessage="fill in the blank (Email)"
         ControlToValidate="txtEml"
         Display="Dynamic" 
-        text="*Please enter a valid email"
+        text="*"
         ForeColor="Red">
           </asp:RequiredFieldValidator>
           
@@ -79,7 +79,7 @@
         </td>
 
           <td><asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" CssClass="button"   /></td>
-   
+    <td></td>
        
     </tr>
 
@@ -91,6 +91,7 @@
                 ForeColor="Red" ID="ValidationSummary1" 
                 runat="server" />
         </td>
+          <td></td>
     </tr>
 
 
@@ -99,6 +100,7 @@
           <td>
             <asp:Label ID="info" runat="server" Font-Bold="True"></asp:Label>
         </td>
+         <td></td>
      </tr>
 
   

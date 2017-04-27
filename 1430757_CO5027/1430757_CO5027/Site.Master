@@ -23,11 +23,12 @@
                 <!--navigation-->
 	            <div id="nav">
 		            <ul>
-                        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForm/default.aspx">Home</asp:HyperLink></li>
+                        
+                        <li><a href="default.aspx">Home</a></li>
                         <li><asp:HyperLink ID="HyperLink2" runat="server">Login</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink3" runat="server">Product</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink4" runat="server">CheckOut</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/WebForm/contactus.aspx">ContactUs</asp:HyperLink></li>
+                        <li><a href="contact.aspx">ContactUs</a></li>
 		            </ul>
                 </div>
 

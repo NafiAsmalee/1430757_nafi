@@ -70,7 +70,7 @@
                 <!--Retrieve image from http://itplaza.vn/userfiles/images/ASUS/GL552JX-DM144D.jpg-->
             </div>
             <div>
-                <img data-u="image"src="../img/3.jpg" alt="third" />
+                <img data-u="image" src="../img/3.jpg" alt="third" />
                 <!--Retrieve image from https://i.ytimg.com/vi/XFmWHte-fqA/maxresdefault.jpg-->
             </div>
         </div>
