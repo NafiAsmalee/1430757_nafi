@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_1430757_co5027_naftechModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblLaptop">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LP_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type_ID" Type="int" Nullable="false" />
+          <Property Name="LP_name" Type="varchar" MaxLength="100" />
+          <Property Name="LP_price" Type="int" />
+          <Property Name="LP_desc" Type="text" />
+          <Property Name="LP_image" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="tblPurchase">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cust_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LP_ID" Type="int" Nullable="false" />
+          <Property Name="LP_price" Type="int" Nullable="false" />
+          <Property Name="LP_date" Type="datetime" />
+          <Property Name="in_Cart" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GU_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LP_FName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LP_LName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LP_address" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="LP_PCode" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tblProduct_tblLaptop">
+          <End Role="tblLaptop" Type="Self.tblLaptop" Multiplicity="1" />
+          <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLaptop">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblProduct">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPurchase_tblProduct">
+          <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
+          <End Role="tblPurchase" Type="Self.tblPurchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblProduct">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblPurchase">
+              <PropertyRef Name="LP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_1430757_co5027_naftechModelStoreContainer">
+          <EntitySet Name="tblLaptop" EntityType="Self.tblLaptop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPurchase" EntityType="Self.tblPurchase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblProduct_tblLaptop" Association="Self.FK_tblProduct_tblLaptop">
+            <End Role="tblLaptop" EntitySet="tblLaptop" />
+            <End Role="tblProduct" EntitySet="tblProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPurchase_tblProduct" Association="Self.FK_tblPurchase_tblProduct">
+            <End Role="tblProduct" EntitySet="tblProduct" />
+            <End Role="tblPurchase" EntitySet="tblPurchase" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_1430757_co5027_naftechModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblLaptop">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LP_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tblProducts" Relationship="Self.FK_tblProduct_tblLaptop" FromRole="tblLaptop" ToRole="tblProduct" />
+        </EntityType>
+        <EntityType Name="tblProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type_ID" Type="Int32" Nullable="false" />
+          <Property Name="LP_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LP_price" Type="Int32" />
+          <Property Name="LP_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LP_image" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblLaptop" Relationship="Self.FK_tblProduct_tblLaptop" FromRole="tblProduct" ToRole="tblLaptop" />
+          <NavigationProperty Name="tblPurchases" Relationship="Self.FK_tblPurchase_tblProduct" FromRole="tblProduct" ToRole="tblPurchase" />
+        </EntityType>
+        <EntityType Name="tblPurchase">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cust_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LP_ID" Type="Int32" Nullable="false" />
+          <Property Name="LP_price" Type="Int32" Nullable="false" />
+          <Property Name="LP_date" Type="DateTime" Precision="3" />
+          <Property Name="in_Cart" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tblProduct" Relationship="Self.FK_tblPurchase_tblProduct" FromRole="tblPurchase" ToRole="tblProduct" />
+        </EntityType>
+        <Association Name="FK_tblProduct_tblLaptop">
+          <End Role="tblLaptop" Type="Self.tblLaptop" Multiplicity="1" />
+          <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLaptop">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblProduct">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPurchase_tblProduct">
+          <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
+          <End Role="tblPurchase" Type="Self.tblPurchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblProduct">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblPurchase">
+              <PropertyRef Name="LP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_1430757_co5027_naftechEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblLaptops" EntityType="Self.tblLaptop" />
+          <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
+          <EntitySet Name="tblPurchases" EntityType="Self.tblPurchase" />
+          <AssociationSet Name="FK_tblProduct_tblLaptop" Association="Self.FK_tblProduct_tblLaptop">
+            <End Role="tblLaptop" EntitySet="tblLaptops" />
+            <End Role="tblProduct" EntitySet="tblProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPurchase_tblProduct" Association="Self.FK_tblPurchase_tblProduct">
+            <End Role="tblProduct" EntitySet="tblProducts" />
+            <End Role="tblPurchase" EntitySet="tblPurchases" />
+          </AssociationSet>
+          <EntitySet Name="tblUsers" EntityType="db_1430757_co5027_naftechModel.tblUser" />
+        </EntityContainer>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GU_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LP_FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LP_LName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LP_address" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="LP_PCode" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_1430757_co5027_naftechModelStoreContainer" CdmEntityContainer="db_1430757_co5027_naftechEntities">
+          <EntitySetMapping Name="tblLaptops">
+            <EntityTypeMapping TypeName="db_1430757_co5027_naftechModel.tblLaptop">
+              <MappingFragment StoreEntitySet="tblLaptop">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LP_name" ColumnName="LP_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblProducts">
+            <EntityTypeMapping TypeName="db_1430757_co5027_naftechModel.tblProduct">
+              <MappingFragment StoreEntitySet="tblProduct">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="LP_name" ColumnName="LP_name" />
+                <ScalarProperty Name="LP_price" ColumnName="LP_price" />
+                <ScalarProperty Name="LP_desc" ColumnName="LP_desc" />
+                <ScalarProperty Name="LP_image" ColumnName="LP_image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPurchases">
+            <EntityTypeMapping TypeName="db_1430757_co5027_naftechModel.tblPurchase">
+              <MappingFragment StoreEntitySet="tblPurchase">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="cust_ID" ColumnName="cust_ID" />
+                <ScalarProperty Name="LP_ID" ColumnName="LP_ID" />
+                <ScalarProperty Name="LP_price" ColumnName="LP_price" />
+                <ScalarProperty Name="LP_date" ColumnName="LP_date" />
+                <ScalarProperty Name="in_Cart" ColumnName="in_Cart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUsers">
+            <EntityTypeMapping TypeName="db_1430757_co5027_naftechModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="LP_PCode" ColumnName="LP_PCode" />
+                <ScalarProperty Name="LP_address" ColumnName="LP_address" />
+                <ScalarProperty Name="LP_LName" ColumnName="LP_LName" />
+                <ScalarProperty Name="LP_FName" ColumnName="LP_FName" />
+                <ScalarProperty Name="GU_ID" ColumnName="GU_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

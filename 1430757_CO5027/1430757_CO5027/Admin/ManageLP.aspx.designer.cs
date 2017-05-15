@@ -10,69 +10,78 @@
 namespace _1430757_CO5027 {
     
     
-    public partial class Site {
+    public partial class ManageLP {
         
         /// <summary>
-        /// ContentPlaceHolder control.
+        /// txtNm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder;
+        protected global::System.Web.UI.WebControls.TextBox txtNm;
         
         /// <summary>
-        /// form1 control.
+        /// ddlTyp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTyp;
         
         /// <summary>
-        /// lnkSignUp control.
+        /// SqlDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkSignUp;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDS;
         
         /// <summary>
-        /// Status control.
+        /// txtPrc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Status;
+        protected global::System.Web.UI.WebControls.TextBox txtPrc;
         
         /// <summary>
-        /// lnkSignIn control.
+        /// ddlImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkSignIn;
+        protected global::System.Web.UI.WebControls.DropDownList ddlImg;
         
         /// <summary>
-        /// btnSignOut control.
+        /// txtDes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSignOut;
+        protected global::System.Web.UI.WebControls.TextBox txtDes;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// lblDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDesc;
     }
 }

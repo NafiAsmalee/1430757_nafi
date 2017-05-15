@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1430757_CO5027.Site" %>
 
+
+
+
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -24,11 +27,19 @@
 	            <div id="nav">
 		            <ul>
                         
-                        <li><a href="default.aspx">Home</a></li>
-                        <li><asp:HyperLink ID="HyperLink2" runat="server">Login</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink3" runat="server">Product</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink4" runat="server">CheckOut</asp:HyperLink></li>
-                        <li><a href="contact.aspx">ContactUs</a></li>
+                        <li><a href="../default.aspx">Home</a></li>
+                        <li><a href="../contact.aspx">ContactUs</a></li>
+                        <li><a href="../Admin/admin.aspx">Admin</a></li>
+
+                         <li style="float: right">
+                            <asp:HyperLink ID="lnkSignUp" runat="server" NavigateUrl="~/User/Signup.aspx" >SignUp</asp:HyperLink>
+                            <asp:HyperLink ID="Status" runat="server"  NavigateUrl="~/cart.aspx" />
+                        </li>
+
+                        <li style="float: right">
+                            <asp:HyperLink ID="lnkSignIn" runat="server" NavigateUrl="~/User/Signin.aspx">SignIn</asp:HyperLink>
+                            <asp:LinkButton ID="btnSignOut" runat="server" Text="Sign out" OnClick="lnkSignOut_Click" />
+                        </li>
 		            </ul>
                 </div>
 

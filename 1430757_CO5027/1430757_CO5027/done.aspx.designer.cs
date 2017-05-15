@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _1430757_CO5027.WebForm
+namespace _1430757_CO5027
 {
 
 
-    public partial class _default
+    public partial class done
     {
     }
 }
