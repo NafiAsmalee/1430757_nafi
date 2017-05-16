@@ -46,7 +46,7 @@ namespace _1430757_CO5027.WebForm
             }
             catch (Exception ex)
             {
-                // Log - Event Viewer or table 
+                // Log of Event Viewer 
                 info.ForeColor = System.Drawing.Color.Blue;
                 info.ForeColor = System.Drawing.Color.Red;
                 info.Text = "There is an unknown problem";

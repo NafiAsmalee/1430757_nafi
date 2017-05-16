@@ -8,6 +8,9 @@ using System.Collections;
 using System.IO;
 using _1430757_CO5027.Models;
 
+//Retrieve from https://www.youtube.com/watch?v=BKujvivVFKI 
+//Retrieve from https://www.youtube.com/watch?v=hkiYuPBwnkQ
+
 namespace _1430757_CO5027
 {
     public partial class ManageLP : System.Web.UI.Page
@@ -16,7 +19,7 @@ namespace _1430757_CO5027
         {
             if (!IsPostBack)
                 GetImg();
-            //Check if the url contains an id parameter
+            //Check url if its contains an ID parameter
             if (!String.IsNullOrWhiteSpace(Request.QueryString["ID"]))
             {
                 int id = Convert.ToInt32(Request.QueryString["ID"]);
@@ -30,32 +33,32 @@ namespace _1430757_CO5027
             LPModel product = new LPModel();
             tblProduct p = CreateLaptop();
 
-            //Check if the url contains an id parameter
+            //Check url if its contains an ID parameter
             if (!String.IsNullOrWhiteSpace(Request.QueryString["ID"]))
             {
-                //ID exists -> Update existing row
+                //if ID exists can edit and Update row
                 int ID = Convert.ToInt32(Request.QueryString["ID"]);
                 lblDesc.Text = product.UpdateLaptop(ID, p);
             }
             else
             {
-                //ID does not exist -> Create a new row
+                //if ID not exist then Create a new row
                 lblDesc.Text = product.InsertLaptop(p);
             }
         }
 
         private void FillWebPage(int ID)
         {
-            //Get selected product from DB
+            //selected Laptop from DB
             LPModel productModel = new LPModel();
             tblProduct product = productModel.GetProduct(ID);
 
-            //Fill Textboxes
+            //Fill in the Textbox
             txtDes.Text = product.LP_desc;
             txtNm.Text = product.LP_name;
             txtPrc.Text = product.LP_price.ToString();
 
-            //Set dropdownlist values
+            //Set the values of drop down list
             ddlImg.SelectedValue = product.LP_image;
             ddlTyp.SelectedValue = product.Type_ID.ToString();
         }
@@ -64,10 +67,10 @@ namespace _1430757_CO5027
         {
             try
             {
-                //Get all filepaths
+                //the image filepaths
                 string[] imgs = Directory.GetFiles(Server.MapPath("~/Images/"));
 
-                //Get all filenames and add them to an arraylist
+                //the filenames and add to an arraylist
                 ArrayList imgList = new ArrayList();
                 foreach (string img in imgs)
                 {

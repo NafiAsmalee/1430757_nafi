@@ -5,6 +5,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+ //Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM
+
 namespace _1430757_CO5027.User
 {
     public partial class Signin : System.Web.UI.Page
@@ -32,18 +34,18 @@ namespace _1430757_CO5027.User
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
-                //Sign in user
+                //Signin user
                 authenticationManager.SignIn(new AuthenticationProperties
                 {
                     IsPersistent = false
                 }, userIdentity);
 
-                //Redirect user to homepage
+                //back to homepage
                 Response.Redirect("~/default.aspx");
             }
             else
             {
-                //litStatus.Text = "Incorrect username or password";
+                litErrMsg.Text = "Incorrect username or password.";
             }
         }
     

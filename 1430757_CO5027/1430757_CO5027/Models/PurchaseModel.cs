@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+//Retrieve from https://www.youtube.com/watch?v=BKujvivVFKI
+//Retrieve from https://www.youtube.com/watch?v=67fW_kNLghc
+
 namespace _1430757_CO5027.Models
 {
     public class PurchaseModel
@@ -29,7 +32,7 @@ namespace _1430757_CO5027.Models
             {
                 db_1430757_co5027_naftechEntities db = new db_1430757_co5027_naftechEntities();
 
-                //Fetch object from db
+                //ge the table from db
                 tblPurchase pro = db.tblPurchases.Find(id);
 
                 pro.cust_ID = product.cust_ID;

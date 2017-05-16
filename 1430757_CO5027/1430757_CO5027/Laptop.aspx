@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Laptop.aspx.cs" Inherits="_1430757_CO5027.Web_Form.Product.Laptop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+
+    <!--Retrieve from https://www.youtube.com/watch?v=SFDQ6Lkp8Ec -->
+    <!--Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM -->
+
     <link href="CSS/product.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -29,7 +33,7 @@
         <tr>
             <td>Product No:
                 <hr />
-                <asp:Label ID="lblProNo" runat="server" Style="font-style: italic"></asp:Label>
+                <asp:Label ID="lblProNo" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

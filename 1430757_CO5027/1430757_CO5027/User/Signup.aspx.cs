@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using _1430757_CO5027.Models;
 
+ //Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM
+
 namespace _1430757_CO5027.User
 {
     public partial class Signup : System.Web.UI.Page
@@ -20,15 +22,15 @@ namespace _1430757_CO5027.User
 
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
-            // Default UserStore constructor uses the default connection string named: DefaultConnection
+            // UserStore constructor uses is a default connection string which is named as DefaultConnection
             var userStore = new UserStore<IdentityUser>();
 
-            //Set ConnectionString to GarageConnectionString
+            //Set ConnectionString to db_1430757_co5027_naftechConnectionString
             userStore.Context.Database.Connection.ConnectionString =
                 System.Configuration.ConfigurationManager.ConnectionStrings["db_1430757_co5027_naftechConnectionString"].ConnectionString;
             var manager = new UserManager<IdentityUser>(userStore);
 
-            //Create new user and try to store in DB.
+            //Create a new user and store in Database.
             var user = new IdentityUser { UserName = txtUname.Text };
 
             if (txtPword.Text == txtCPword.Text)
@@ -50,11 +52,11 @@ namespace _1430757_CO5027.User
                         UserModel model = new UserModel();
                         model.InsertUserDetail(userDetail);
 
-                        //Store user in DB
+                        //Store the user detail in Database
                         var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                         var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
-                        //If succeedeed, log in the new user and set a cookie and redirect to homepage
+                        //If succeess, signin the new user and go to homepage
                         authenticationManager.SignIn(new AuthenticationProperties(), userIdentity);
                         Response.Redirect("~/default.aspx");
                     }
@@ -70,7 +72,7 @@ namespace _1430757_CO5027.User
             }
             else
             {
-                litStatMsg.Text = "Passwords must match!";
+                litStatMsg.Text = "Password does not match!";
             }
         }
     }

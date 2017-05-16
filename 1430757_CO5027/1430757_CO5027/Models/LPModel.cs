@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
+//Retrieve from https://www.youtube.com/watch?v=BKujvivVFKI
+//Retrieve from https://www.youtube.com/watch?v=hkiYuPBwnkQ
+
+
 namespace _1430757_CO5027.Models
 {
     public class LPModel
@@ -29,7 +34,7 @@ namespace _1430757_CO5027.Models
             {
                 db_1430757_co5027_naftechEntities db = new db_1430757_co5027_naftechEntities();
 
-                //Fetch object from db
+                //get the table from db
                 tblProduct pro = db.tblProducts.Find(id);
 
                 pro.Type_ID = product.Type_ID;

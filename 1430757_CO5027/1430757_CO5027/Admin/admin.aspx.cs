@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//Retrieve from https://www.youtube.com/watch?v=hkiYuPBwnkQ-->
+
 namespace _1430757_CO5027
 {
     public partial class admin : System.Web.UI.Page
@@ -22,13 +24,13 @@ namespace _1430757_CO5027
 
         protected void gvLP_RowEditing1(object sender, GridViewEditEventArgs e)
         {
-            //Get selected row
+            // select -  row
             GridViewRow row = gvLP.Rows[e.NewEditIndex];
 
-            //Get Id of selected product
+            //ID select from product
             int rowId = Convert.ToInt32(row.Cells[1].Text);
 
-            //Redirect user to ManageProducts along with the selected rowId
+            //go to to ManageLP with the selected row
             Response.Redirect("~/Admin/ManageLP.aspx?id=" + rowId);
         }
     }

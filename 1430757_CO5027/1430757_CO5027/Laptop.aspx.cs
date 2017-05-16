@@ -7,6 +7,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//Retrieve from https://www.youtube.com/watch?v=SFDQ6Lkp8Ec
+//Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM
+
+
 namespace _1430757_CO5027.Web_Form.Product
 {
     public partial class Laptop : System.Web.UI.Page
@@ -40,13 +44,13 @@ namespace _1430757_CO5027.Web_Form.Product
                 }
                 else
                 {
-                    lblAction.Text = "Please Sign in to order Laptop!";
+                    lblAction.Text = "Please Signin to order Laptop!";
                 }
             }
         }
         private void fPage()
         {
-            //Get selected product data
+            //select laptop data
             if (!string.IsNullOrWhiteSpace(Request.QueryString["ID"]))
             {
                 int ID = Convert.ToInt32(Request.QueryString["ID"]);
@@ -60,7 +64,7 @@ namespace _1430757_CO5027.Web_Form.Product
                 imgLaptop.ImageUrl = "~/Images/" + product.LP_image;
                 lblProNo.Text = product.ID.ToString();
 
-                //Fill amount list with numbers 1-20
+                //Fill quantity with numbers 1-20
                 int[] amount = Enumerable.Range(1, 20).ToArray();
                 ddlQuantity.DataSource = amount;
                 ddlQuantity.AppendDataBoundItems = true;

@@ -1,5 +1,10 @@
-﻿body {
+﻿
+/* Retrieve from https://www.youtube.com/watch?v=sXS2lX7XdOs */
+
+
+body {
     background-color:#2f2e2a;
+  
 }
 
 /* --wrapper-- */	
@@ -12,6 +17,7 @@
     margin-bottom: 0px;
 	margin-right: auto;
 	margin-left: auto;
+
 }
 
 /* --header-- */	

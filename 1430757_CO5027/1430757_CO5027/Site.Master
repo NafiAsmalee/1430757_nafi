@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1430757_CO5027.Site" %>
 
-
+ <!--Retrieve from https://www.youtube.com/watch?v=sXS2lX7XdOs -->
+ <!--Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM -->
+ <!--Retrieve from https://www.youtube.com/watch?v=67fW_kNLghc -->
 
 
 <!DOCTYPE html>
@@ -9,7 +11,7 @@
     <title>Naftech</title>
 
     <!--LINK TO CSS-->
-    <link href="CSS/mp.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/masterpage.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -27,17 +29,18 @@
 	            <div id="nav">
 		            <ul>
                         
-                        <li><a href="../default.aspx">Home</a></li>
-                        <li><a href="../contact.aspx">ContactUs</a></li>
-                        <li><a href="../Admin/admin.aspx">Admin</a></li>
+                        <li><a href="../default.aspx">HOME</a></li>
+                        <li><a href="../Admin/admin.aspx">ADMIN</a></li>
+                        <li><a href="../contact.aspx">CONTACTUS</a></li>
+                        
 
                          <li style="float: right">
-                            <asp:HyperLink ID="lnkSignUp" runat="server" NavigateUrl="~/User/Signup.aspx" >SignUp</asp:HyperLink>
+                            <asp:HyperLink ID="lnkSignUp" runat="server" NavigateUrl="~/User/Signup.aspx" >SIGNUP</asp:HyperLink>
                             <asp:HyperLink ID="Status" runat="server"  NavigateUrl="~/cart.aspx" />
                         </li>
 
                         <li style="float: right">
-                            <asp:HyperLink ID="lnkSignIn" runat="server" NavigateUrl="~/User/Signin.aspx">SignIn</asp:HyperLink>
+                            <asp:HyperLink ID="lnkSignIn" runat="server" NavigateUrl="~/User/login.aspx">SIGNIN</asp:HyperLink>
                             <asp:LinkButton ID="btnSignOut" runat="server" Text="Sign out" OnClick="lnkSignOut_Click" />
                         </li>
 		            </ul>

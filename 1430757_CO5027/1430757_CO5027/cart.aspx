@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="_1430757_CO5027.cart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <link href="CSS/user.css" rel="stylesheet" />
+   
+     <!--Retrieve from https://www.youtube.com/watch?v=67fW_kNLghc -->
+
+    <link href="/CSS/user.css" rel="stylesheet" />
+    <link href="/CSS/product.css" rel="stylesheet" />
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <asp:Panel ID="pnlSCart" runat="server">
@@ -43,13 +48,13 @@
 
             <tr>
                 <td>
-                    <br />
-                    <asp:LinkButton ID="lnkBtn" runat="server" PostBackUrl="~/default.aspx">Continue Shopping</asp:LinkButton> &nbsp;&nbsp; or                     
-                    <asp:Button ID="btnCOut" runat="server" Text="Check Out" CssClass="button" Width="250px" PostBackUrl="~/done.aspx" />
+                    <hr />
+                    <asp:LinkButton ID="lnkBtn" runat="server" PostBackUrl="~/default.aspx">Continue Shopping</asp:LinkButton> or                     
+                    <asp:Button ID="btnCOut" runat="server" Text="Check Out" CssClass="button"  PostBackUrl="~/done.aspx" />
 
-                    <br />
+                    <hr />
 
-                    <asp:LinkButton ID="litPaypal" Text="" runat="server" />
+                   
                 </td>
             </tr>
 

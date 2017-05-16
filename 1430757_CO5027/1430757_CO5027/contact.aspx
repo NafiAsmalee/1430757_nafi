@@ -4,7 +4,7 @@
     <!--Retrieve from https://www.youtube.com/watch?v=Fw1X7HLZfos -->
 
     <!--LINK TO CSS-->
-    <link href="../CSS/cu.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/contactus.css" rel="stylesheet" type="text/css" />
 <div id="cutable">
     <h1>Contact Us</h1>
     <!--contact us details with submit button-->

@@ -1,4 +1,6 @@
-﻿body {
+﻿
+ /* Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM */
+body {
 }
 .button {
     background: linear-gradient(to bottom, #FFB600, orange);
@@ -33,3 +35,61 @@
     box-shadow: 0 0 25px #CCC;
 }
 
+/*Admin page*/
+#mlptable table {
+    padding-left:350px;
+}
+
+#mlptable h1 {
+        text-align:center;
+}
+#mlpttable table {
+    padding-left:350px;
+}
+
+#mlpttable h1 {
+        margin-left:400px;
+}
+
+.textdesc{
+    Height:75px;
+    Width:235px;
+}
+
+.textbox{
+    Width:235px;
+}
+.dropdown{
+    width:242px;
+}
+
+.btn{
+    Width:100px;
+    margin-left:500px;
+}
+
+.status{
+    margin-left:400px;
+}
+
+
+/*Signin page and signup page*/
+
+#signin table {
+    margin-left:350px;
+}
+
+#signin h1 {
+        text-align:center;
+}
+
+/*Signup page*/
+
+#signup table {
+    margin-left:350px;
+
+}
+
+#signup h1 {
+        text-align:center;
+}

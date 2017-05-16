@@ -1,6 +1,9 @@
-﻿body {
+﻿
+/* Retrieve from https://www.youtube.com/watch?v=SFDQ6Lkp8Ec */
+
+body {
    
-   
+   height:200px;
 }
 
 
@@ -24,6 +27,8 @@
     height: 250px;
     margin-bottom:10px;
     text-align: center;
+  
+
 }
 
 .LaptopName {
@@ -78,6 +83,7 @@
     margin-bottom: 10px;
     width: 100%;
     padding: 10px;
+   
 }
 
 .CartTable input

@@ -9,6 +9,11 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using _1430757_CO5027.Models;
 
+
+ //Retrieve from https://www.youtube.com/watch?v=mBrxQQJdoHM
+ //Retrieve from https://www.youtube.com/watch?v=67fW_kNLghc
+
+
 namespace _1430757_CO5027
 {
     public partial class Site : System.Web.UI.MasterPage
@@ -43,7 +48,7 @@ namespace _1430757_CO5027
         {
             IAuthenticationManager authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
             authenticationManager.SignOut();
-            Response.Redirect("/User/Signin.aspx");
+            Response.Redirect("/User/login.aspx");
         }
     }
 }

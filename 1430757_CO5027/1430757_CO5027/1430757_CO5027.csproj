@@ -118,9 +118,8 @@
   <ItemGroup>
     <Content Include="Admin\admin.aspx" />
     <Content Include="cart.aspx" />
-    <Content Include="CSS\cu.css" />
-    <Content Include="CSS\intro.css" />
-    <Content Include="CSS\mp.css" />
+    <Content Include="CSS\contactus.css" />
+    <Content Include="CSS\masterpage.css" />
     <Content Include="CSS\product.css" />
     <Content Include="CSS\user.css" />
     <Content Include="done.aspx" />
@@ -131,7 +130,6 @@
     <Content Include="Images\55.jpg" />
     <Content Include="Images\66.jpg" />
     <Content Include="Images\header.jpg" />
-    <Content Include="Images\map.JPG" />
     <Content Include="Admin\ManageLP.aspx" />
     <Content Include="Admin\manageLPtype.aspx" />
     <Content Include="Model.Context.tt">
@@ -165,7 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="User\Signin.aspx" />
+    <Content Include="User\login.aspx" />
     <Content Include="User\Signup.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -269,12 +267,12 @@
     <Compile Include="tblUser.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="User\Signin.aspx.cs">
-      <DependentUpon>Signin.aspx</DependentUpon>
+    <Compile Include="User\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Signin.aspx.designer.cs">
-      <DependentUpon>Signin.aspx</DependentUpon>
+    <Compile Include="User\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Signup.aspx.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
@@ -286,7 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Web_Form\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
